@@ -7,4 +7,10 @@ $(document).ready(function() {
 		$('.burger, .menu').removeClass('active');
 		$('body').removeClass('scroll-lock');
 	});
+
+	$('.tabs__blocks').on('click', 'div:not(.active)', function() {
+		$(this)
+		  .addClass('active').siblings().removeClass('active')
+		  .closest('.container').find('.tabs__content-inner').removeClass('active').eq($(this).index()).addClass('active');
+	 });
 }); 
