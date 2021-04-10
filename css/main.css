@@ -266,7 +266,7 @@ input, textarea {
 		display: flex;
 }
 .tabs__item:hover{
-	background: #EC7979;
+	background:rgba(236, 121, 121, 0.7);
 }
 .tabs__item{
 	height: 110px;
@@ -286,11 +286,17 @@ input, textarea {
 .tabs__item:last-of-type{
 	margin-bottom: 0;
 }
-.tabs__item-active{
+.tabs__item.active{
 	background: #EC7979;
 }
 .tabs__content{
 	margin: 0 50px 0 118px;
+	min-height: 368px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 .tabs__header{
 	color: #000000;
@@ -324,7 +330,7 @@ padding: 11px 27px 11px 25px;
 .tabs__content-inner{
 	display: none;
 }
-.active{
+.tabs__content-inner.active{
 	display: block;
 }
 
@@ -715,14 +721,12 @@ footer {
 		justify-content: space-around;
 		margin-bottom: 30px;
 	}
-	.tabs__item:hover{
-		background: #EC7979;
-	}
 	.tabs__item{
 		height: 90px;
 		width: 90px;
 		margin-bottom: 0px;
 		padding: 35px 0;
+		cursor: pointer;
 	}
 	.tabs__content{
 		margin: 0;
